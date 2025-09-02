@@ -1,4 +1,4 @@
-import pygame
+import pygame # type: ignore # type :ignore
 
 # Base class for game objects
 class CircleShape(pygame.sprite.Sprite):
@@ -24,5 +24,5 @@ class CircleShape(pygame.sprite.Sprite):
     def check_collision(self, other):
         distance = pygame.math.Vector2.distance_to(self.position, other.position)
         if distance > (self.radius + other.radius):
-            return True
-        return False
+            return False
+        return True
